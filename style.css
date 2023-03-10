@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .bayan {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 0 1rem 1rem 1rem;
+    border-bottom: 0.1rem solid gray;
+  }
+  ul {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  li {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    width: 18rem;
+    margin: 0 1rem 1rem 1rem;
+  }
+  ul li {
+    border-bottom: 0.1rem solid gray;
+  }
+  .icon {
+    background-image: url(./assets/icons/plus-solid.svg);
+    background-size: 1rem 1rem;
+    width: 1rem;
+    height: 1rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    /* cursor: pointer; */
+  }
+  .meme-descr {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    width: 18rem;
+  }
+  .meme-img {
+    background-image:url(./assets/img/1\ lsT72HsNsDrNsvUVfdYLsA.webp);
+    background-size: 10rem 10rem;
+    width: 10rem;
+    height: 10rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
