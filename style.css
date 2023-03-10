@@ -50,8 +50,23 @@
     align-items: center;
     list-style-type: none;
     width: 18rem;
+    transition: color .5s ease-out;
+  }
+  .meme-descr:hover {
+    color:rgb(30, 126, 170);
+  }
+  .meme-input {
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+  .meme-input:checked + .meme-img {
+    display: block;
   }
   .meme-img {
+    display: none;
     background-image:url(./assets/img/1\ lsT72HsNsDrNsvUVfdYLsA.webp);
     background-size: 10rem 10rem;
     width: 10rem;
