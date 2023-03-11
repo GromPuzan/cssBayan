@@ -1,77 +1,124 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  .bayan {
-    font-size: 3rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-decoration: none;
-    margin: 0 1rem 1rem 1rem;
-    border-bottom: 0.1rem solid gray;
-  }
-  ul {
-    font-size: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-decoration: none;
-  }
-  li {
-    display: flex;
-    font-size: 1.5rem;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    list-style-type: none;
-    width: 18rem;
-    margin: 0 1rem 1rem 1rem;
-  }
-  ul li {
-    border-bottom: 0.1rem solid gray;
-  }
-  .icon {
-    background-image: url(./assets/icons/plus-solid.svg);
-    background-size: 1rem 1rem;
-    width: 1rem;
-    height: 1rem;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    /* cursor: pointer; */
-  }
-  .meme-descr {
-    display: flex;
-    font-size: 1.5rem;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    width: 18rem;
-    transition: color .5s ease-out;
-  }
-  .meme-descr:hover {
-    color:rgb(30, 126, 170);
-  }
-  .meme-input {
-    width: 0;
-    height: 0;
-    -webkit-appearance: none;
-    appearance: none;
-    position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
 }
-  .meme-input:checked + .meme-img {
-    display: block;
+body {
+  background-color: #c9e4f3;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bayan {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  margin: 0 1rem 1rem 1rem;
+}
+ul {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+}
+li {
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  width: 18rem;
+  margin: 0 1rem 1rem 1rem;
+  border-top: 0.05rem solid gray;
+}
+li:last-child {
+  border-bottom: 0.05rem solid gray;
+  padding-bottom: 1rem;
+}
+.meme-input:checked + .meme-icon {
+  transform: rotate(135deg);
+}
+.meme-icon {
+  background-image: url(./assets/icons/plus-solid.svg);
+  background-size: 1rem 1rem;
+  width: 1rem;
+  height: 1rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  /* cursor: pointer; */
+}
+
+.meme-descr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  color: black;
+  width: 100%;
+}
+.meme-descr:hover {
+  color: blue;
+}
+.meme-input {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  /* position: absolute; */
+}
+input:checked ~ label {
+  box-shadow: 0px 0px 0.4em rgb(204 204 204 / 60%);
+}
+.meme-input:checked ~ .meme-img {
+  display: block;
+}
+.meme-input:checked ~ .meme-descr {
+  color: rgb(30, 126, 170);
+}
+.meme-input:checked ~ .meme-item {
+  color: rgb(30, 126, 170);
+}
+.meme-input:checked ~.meme-icon {
+    transform: translateY(-50%);
+}
+input:checked + .meme-img {
+  width: 50%;
+  transform: scale(1);
+}
+.meme-img {
+  display: none;
+  /* background-image: url(./assets/img/1\ lsT72HsNsDrNsvUVfdYLsA.webp); */
+  background-size: 10rem 10rem;
+  width: 15rem;
+  height: 13rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  transition: all 250ms ease-in-out, all 250ms ease-in-out;
+}
+
+@media screen and (min-width: 820px) {
+  li {
+    font-size: 2.5rem;
+    width: 40rem;
   }
   .meme-img {
-    display: none;
-    background-image:url(./assets/img/1\ lsT72HsNsDrNsvUVfdYLsA.webp);
-    background-size: 10rem 10rem;
-    width: 10rem;
-    height: 10rem;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: transparent;
+    width: 20rem;
+    height: 20rem;
+    background-size: 20rem 20rem;
   }
+}
