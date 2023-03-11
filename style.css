@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   width: 100%;
   max-width: 70em;
 }
@@ -75,9 +75,6 @@ li:last-child {
   color: black;
   width: 100%;
 }
-.meme-descr:hover {
-  color: rgb(30, 126, 170);
-}
 .meme-input {
   width: 0;
   height: 0;
@@ -93,21 +90,21 @@ li:last-child {
   background-position: center center;
   background-repeat: no-repeat;
   background-color: transparent;
-  transition: all .5s ease-out;
-  -moz-transition: all .5s ease-out;
-  -webkit-transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
 }
 .meme-input:checked ~ .meme-img {
   width: 75%;
   height: auto;
   max-width: 8em;
 }
- .meme-input:checked ~ .meme-descr {
+.meme-input:checked ~ .meme-descr {
   color: rgb(30, 126, 170);
 }
 .meme-input:checked ~ label > .meme-icon {
   transform: rotate(45deg);
-  transition: all .5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 @media screen and (min-width: 450px) {
@@ -120,25 +117,35 @@ li:last-child {
     font-size: 2.5rem;
   }
 }
-@media screen and (min-width: 1368px) {
+@media screen and (min-width: 1200px) {
   li {
     font-size: 3rem;
   }
   .meme-icon {
     display: none;
   }
-  .wrapper:hover .meme-icon {
-    display: block;
+  ul:hover{
+    cursor: pointer;
   }
-  .wrapper:hover .meme-name {
-    color: rgb(30, 126, 170);
+  .meme-descr:hover {
+    cursor: pointer;
   }
-  .meme-name:active {
-    color:brown;
+  .meme-descr:active .meme-name {
+    color: brown;
     opacity: 0.8;
   }
   .meme-item:active {
+    color: brown;
     opacity: 0.8;
+  }
+  ul:hover .meme-icon {
+    display: block;
+  }
+  ul:hover .meme-name {
+    color: rgb(30, 126, 170);
+  }
+  .meme-descr:hover {
+    color: rgb(30, 126, 170);
   }
   .meme-item:hover .meme-img {
     width: 75%;
@@ -147,6 +154,6 @@ li:last-child {
   }
   .meme-item:hover .meme-icon {
     transform: rotate(45deg);
-    transition: all .5s ease-out;
+    transition: all 0.5s ease-out;
   }
 }
