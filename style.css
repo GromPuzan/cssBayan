@@ -135,7 +135,6 @@ li:last-child {
     opacity: 0.8;
   }
   .meme-item:active {
-    color: brown;
     opacity: 0.8;
   }
   ul:hover .meme-icon {
