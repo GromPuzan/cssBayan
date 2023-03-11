@@ -71,7 +71,7 @@ li:last-child {
   width: 100%;
 }
 .meme-descr:hover {
-  color: blue;
+  color: rgb(30, 126, 170);
 }
 .meme-input {
   width: 0;
@@ -85,6 +85,8 @@ input:checked ~ label {
 }
 .meme-input:checked ~ .meme-img {
   display: block;
+  width: 15rem;
+  height: 13rem;
 }
 .meme-input:checked ~ .meme-descr {
   color: rgb(30, 126, 170);
@@ -92,23 +94,19 @@ input:checked ~ label {
 .meme-input:checked ~ .meme-item {
   color: rgb(30, 126, 170);
 }
-.meme-input:checked ~.meme-icon {
-    transform: translateY(-50%);
-}
-input:checked + .meme-img {
-  width: 50%;
-  transform: scale(1);
+.meme-input:checked ~ label > .meme-icon {
+  transform: rotate(45deg);
 }
 .meme-img {
-  display: none;
-  /* background-image: url(./assets/img/1\ lsT72HsNsDrNsvUVfdYLsA.webp); */
+  width: 0rem;
+  height: 0rem;
   background-size: 10rem 10rem;
-  width: 15rem;
-  height: 13rem;
   background-position: center center;
   background-repeat: no-repeat;
   background-color: transparent;
-  transition: all 250ms ease-in-out, all 250ms ease-in-out;
+  transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  -webkit-transition: all .25s ease-out;
 }
 
 @media screen and (min-width: 820px) {
